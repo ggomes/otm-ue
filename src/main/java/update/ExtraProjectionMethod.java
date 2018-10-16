@@ -7,6 +7,11 @@ public class ExtraProjectionMethod implements UpdateFormula {
 
     @Override
     public DemandAssignment evaluate(PathCost c) {
+
+        // TODO
+
+
         return null;
     }
+
 }

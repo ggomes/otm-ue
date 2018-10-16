@@ -1,14 +1,14 @@
 import checker.ConvergenceChecker;
 import data.DemandAssignment;
 import data.PathCost;
-import model.ModelManager;
+import model.AbstractModelManager;
 import update.UpdateFormula;
 
 public class Statics {
 
     public static int MAX_ITERATIONS = 1000;
 
-    public static DemandAssignment fixed_point_iteration(ModelManager model_manager, UpdateFormula update_formula, DemandAssignment h0, ConvergenceChecker checker){
+    public static DemandAssignment fixed_point_iteration(AbstractModelManager model_manager, UpdateFormula update_formula, DemandAssignment h0, ConvergenceChecker checker){
 
         DemandAssignment h = h0;
         PathCost c, cprev = null;

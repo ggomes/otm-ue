@@ -1,7 +1,7 @@
 import checker.ConvergenceChecker;
 import checker.L2_assignment_error;
 import data.DemandAssignment;
-import model.ModelManager;
+import model.AbstractModelManager;
 import model.OTMModelManager;
 import org.junit.Test;
 import update.ExtraProjectionMethod;
@@ -14,14 +14,14 @@ public class Tests {
 
         try {
 
-            float sim_dt = 2.0f;
+            float sim_dt = 2f;
             float duration = 3600f;
             float sampling_dt = 300f;
-            String config_name = "";
+            String config_name = "config/seven_links.xml";
             String global_model = "ctm";
 
             // create the model manager: loads the scenario and OD data
-            ModelManager model_manager = new OTMModelManager(config_name,sim_dt,duration,sampling_dt,global_model);
+            AbstractModelManager model_manager = new OTMModelManager(config_name,sim_dt,duration,sampling_dt,global_model);
 
             DemandAssignment h0 = model_manager.get_initial_assigment();
 
